@@ -1,4 +1,5 @@
 //Slider
+alert("hola")
 var quantitySlider = document.getElementById("quantitySlider");
 var colorSlider = 1;
 
