@@ -5,10 +5,367 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+    <!-- [Attributes by Finsweet] Input Active Class -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-inputactive@1/inputactive.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- [Attributes by Finsweet] Number Count -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@finsweet/attributes-numbercount@1/numbercount.js"></script>
+
+    <style>
+        .swiper-slide.home2_header_visuals_item {
+            padding-top: 8rem;
+            transform: scale(0.6);
+            transition: transform 0.5s ease-in-out, padding-top 0.5s ease-in-out;
+            /* Add this line */
+        }
+        
+        .swiper-slide.home2_header_visuals_item.swiper-slide-active {
+            padding-top: 0rem;
+            transform: scale(1);
+        }
+        
+        .swiper-slide.home2_header_visuals_item.swiper-slide-prev {
+            padding-top: 4rem;
+            transform: scale(0.8);
+        }
+        /* Style for the slide just after the active slide */
+        
+        .swiper-slide.home2_header_visuals_item.swiper-slide-next {
+            padding-top: 4rem;
+            transform: scale(0.8);
+        }
+        
+        @media (max-width: 768px) {
+            .swiper-slide.home2_header_visuals_item {
+                padding-top: 0rem;
+                transform: scale(1);
+            }
+            .swiper-slide.home2_header_visuals_item.swiper-slide-prev {
+                padding-top: 0rem;
+                transform: scale(1);
+            }
+            /* Style for the slide just after the active slide */
+            .swiper-slide.home2_header_visuals_item.swiper-slide-next {
+                padding-top: 0rem;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+
+
 </head>
 
 <body>
+
+
+    <div class="s-home-memberships_component">
+        <div class="container c-sp">
+            <div class="grid-3column-calculator grid-pricing">
+                <div id="w-node-_875194a3-dcb0-87ca-6daa-8e7dab518027-1c937e8f" class="w-layout-vflex c-membership">
+                    <div id="w-node-_875194a3-dcb0-87ca-6daa-8e7dab518028-1c937e8f" class="stack-40">
+                        <div class="form-block-3 w-form">
+                            <form id="email-form" name="email-form" data-name="Email Form" method="get" class="type-fo-swag" data-wf-page-id="671677691ca07d4e1c937e8f" data-wf-element-id="875194a3-dcb0-87ca-6daa-8e7dab51802a"><label for="name" class="text-size-medium">Type of swag</label>
+                                <div class="pricing_calc_form-item_radio-wrapper">
+                                    <div aria-label="add_description_here" role="radiogroup" class="pricing_calc_form-item_radio-group"><label class="pricing_calc_form-item_radio-field is-active-inputactive w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom pricing_calc_form-item_radio-button w-radio-input"></div><input type="radio" name="type" id="Pack" data-name="type" style="opacity:0;position:absolute;z-index:-1" checked="" value="Pack"><span fs-inputactive-class="is-active-inputactive" class="pricing_calc_form-item_radio-label w-form-label" for="Pack">Pack</span>
+                        </label><label class="pricing_calc_form-item_radio-field w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom pricing_calc_form-item_radio-button w-radio-input"></div><input type="radio" name="type" id="Bulk" data-name="type" style="opacity:0;position:absolute;z-index:-1" value="Bulk"><span fs-inputactive-class="is-active-inputactive" class="pricing_calc_form-item_radio-label w-form-label" for="Bulk">Bulk</span>
+                        </label></div>
+                                </div>
+                            </form>
+                            <div class="w-form-done">
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="w-form-fail">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                        </div>
+                        <div class="pricing_calc_form-item is-quantity">
+                            <div class="pricing_calc_form-item_header">
+                                <div class="pricing_calc_form-item_label">
+                                    <div id="type-text" class="body-2024">No. of packs</div>
+                                    <div data-tippy-arrow="true" data-tippy-content="Pricing varies based on quantity. The higher the quantity, the lower the prices." data-tippy-placement="top" data-tippy-animation="scale" class="icon-embed-xsmall is-blue tippy w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"></path>
+                        </svg></div>
+                                </div>
+                                <div id="quantityInput" class="h5-2024 _100">500</div>
+                            </div>
+                            <div class="pricing_calc_form-item_slider-wrapper">
+                                <div class="pricing_calc_form-item_slider w-embed"><input type="range" min="50" max="1000" value="50" class="quantity-slider" id="quantitySlider"></div>
+                                <div class="pricing_calc_form-item_slider-styles w-embed">
+                                    <style>
+                                        .quantity-slider {
+                                            -webkit-appearance: none;
+                                            width: 100%;
+                                            height: 4px;
+                                            border-radius: 5px;
+                                            background: #0065FF;
+                                            outline: none;
+                                            -webkit-transition: .2s;
+                                            transition: .2s;
+                                        }
+                                        
+                                        .quantity-slider::-webkit-slider-thumb {
+                                            -webkit-appearance: none;
+                                            appearance: none;
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 50%;
+                                            background: #ffffff;
+                                            cursor: pointer;
+                                        }
+                                        
+                                        .quantity-slider::-moz-range-thumb {
+                                            width: 30px;
+                                            height: 30px;
+                                            border-radius: 50%;
+                                            background: #ffffff;
+                                            cursor: pointer;
+                                        }
+                                    </style>
+                                </div>
+                            </div>
+                            <div class="pricing_calc_form-item_slider-range">
+                                <div class="text-size-small opacity-med">50</div>
+                                <div class="text-size-small opacity-med">1000</div>
+                            </div>
+                        </div>
+                        <div class="pricing_calc_form-item is-quantity">
+                            <div class="form-tockeckbox-selects w-form">
+                                <form id="email-form-2" name="email-form-2" data-name="Email Form 2" method="get" class="form-2" data-wf-page-id="671677691ca07d4e1c937e8f" data-wf-element-id="875194a3-dcb0-87ca-6daa-8e7dab51804f">
+                                    <div class="pricing_calc_form-item_header">
+                                        <div class="pricing_calc_form-item_label">
+                                            <div id="type-text" class="body-2024">Colors in your logo</div>
+                                            <div data-tippy-arrow="true" data-tippy-content="Pricing varies based on quantity. The higher the quantity, the lower the prices." data-tippy-placement="top" data-tippy-animation="scale" class="icon-embed-xsmall is-blue tippy w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="100%" height="100%" preserveaspectratio="xMidYMid meet"
+                                                    viewbox="0 0 24 24">
+                              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"></path>
+                            </svg></div>
+                                        </div>
+                                    </div>
+                                    <div class="div-block-6"><label fs-inputactive-class="is-active-inputactive" class="color-select-radio is-active-inputactive w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-color-check w-radio-input"></div><input type="radio" name="logo-color" id="1" data-name="logo-color" style="opacity:0;position:absolute;z-index:-1" checked="" value="1"><span class="radio-button-label w-form-label" for="1">1</span><img width="28" height="36" alt="" src="https://uploads-ssl.webflow.com/642f44157cf45ef818e9386f/66761578c1e7fcb8177189f5_image-532.png" loading="lazy" class="img-for-radio-select">
+                        </label><label fs-inputactive-class="is-active-inputactive" class="color-select-radio w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-color-check w-radio-input"></div><input type="radio" name="logo-color" id="2" data-name="logo-color" style="opacity:0;position:absolute;z-index:-1" value="2"><span class="radio-button-label w-form-label" for="2">2</span><img width="73" height="14" alt="" src="https://uploads-ssl.webflow.com/642f44157cf45ef818e9386f/667616a4554536685249f92e_image-534.png" loading="lazy" class="img-for-radio-select">
+                        </label><label fs-inputactive-class="is-active-inputactive" class="color-select-radio w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-color-check w-radio-input"></div><input type="radio" name="logo-color" id="3" data-name="logo-color" style="opacity:0;position:absolute;z-index:-1" value="3"><span class="radio-button-label w-form-label" for="3">3</span><img width="35" height="30" alt="" src="https://uploads-ssl.webflow.com/642f44157cf45ef818e9386f/667616a54f53ff5711e2c54c_image-535.png" loading="lazy" class="img-for-radio-select">
+                        </label><label class="color-select-radio w-radio">
+                          <div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-color-check w-radio-input"></div><input type="radio" name="logo-color" id="4" data-name="logo-color" style="opacity:0;position:absolute;z-index:-1" value="4"><span class="radio-button-label w-form-label" for="4">4</span><img width="27" height="28" alt="" src="https://uploads-ssl.webflow.com/642f44157cf45ef818e9386f/667616a6d4d4076c161ef2a5_image-536.png" loading="lazy" class="img-for-radio-select">
+                        </label></div>
+                                </form>
+                                <div class="w-form-done">
+                                    <div>Thank you! Your submission has been received!</div>
+                                </div>
+                                <div class="w-form-fail">
+                                    <div>Oops! Something went wrong while submitting the form.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider-line"></div>
+                        <div class="shipping-option">
+                            <div class="form-block-3 padding-32 w-form">
+                                <form id="email-form" name="email-form" data-name="Email Form" method="get" class="type-fo-swag" data-wf-page-id="671677691ca07d4e1c937e8f" data-wf-element-id="875194a3-dcb0-87ca-6daa-8e7dab518073"><label for="name" class="text-size-medium">Shipping</label>
+                                    <div class="pricing_calc_form-item_radio-wrapper">
+                                        <div aria-label="add_description_here" role="radiogroup" class="pricing_calc_form-item_radio-group"><label class="pricing_calc_form-item_radio-field is-active-inputactive w-radio">
+                            <div class="w-form-formradioinput w-form-formradioinput--inputType-custom pricing_calc_form-item_radio-button w-radio-input"></div><input type="radio" name="type" id="Pack-2" data-name="type" style="opacity:0;position:absolute;z-index:-1" checked="" value="Pack"><span fs-inputactive-class="is-active-inputactive" class="pricing_calc_form-item_radio-label w-form-label" for="Pack-2">USA</span>
+                          </label><label class="pricing_calc_form-item_radio-field w-radio">
+                            <div class="w-form-formradioinput w-form-formradioinput--inputType-custom pricing_calc_form-item_radio-button w-radio-input"></div><input type="radio" name="type" id="Bulk-2" data-name="type" style="opacity:0;position:absolute;z-index:-1" value="Bulk"><span fs-inputactive-class="is-active-inputactive" class="pricing_calc_form-item_radio-label w-form-label" for="Bulk-2">Outside USA</span>
+                          </label></div>
+                                    </div>
+                                </form>
+                                <div class="w-form-done">
+                                    <div>Thank you! Your submission has been received!</div>
+                                </div>
+                                <div class="w-form-fail">
+                                    <div>Oops! Something went wrong while submitting the form.</div>
+                                </div>
+                            </div>
+                            <div class="fields">
+                                <div class="core-input-field-dashboard-mobile-2">
+                                    <div class="text-306">State</div><img width="20" height="20" alt="" src="https://uploads-ssl.webflow.com/642f44157cf45ef818e9386f/667627a37f662e17e8a575f3_Vectors-Wrapper.svg" loading="lazy" class="vectors-wrapper">
+                                </div>
+                                <div class="core-input-field-dashboard-mobile-2">
+                                    <div class="text-306">Zip code</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="w-node-_875194a3-dcb0-87ca-6daa-8e7dab51808e-1c937e8f" class="stack-40">
+                        <div class="button-wrap-vertical">
+                            <a href="https://app.swagup.com/dashboard/product-onboarding" class="button-2024 full-width w-button">calculate cost</a>
+                            <a href="#" class="button-2024 button-outline full-width w-button">Save setup</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="w-node-_875194a3-dcb0-87ca-6daa-8e7dab518094-1c937e8f" class="pricing-image-left"><img width="490" id="w-node-_875194a3-dcb0-87ca-6daa-8e7dab518095-1c937e8f" alt="" src="images/Swag-Pack-2-transparent-2_1Swag-Pack-2-transparent-2.webp" loading="lazy" srcset="images/Swag-Pack-2-transparent-2_1Swag-Pack-2-transparent-2.webp 500w, images/Swag-Pack-2-transparent-2_1Swag-Pack-2-transparent-2.webp 800w, images/Swag-Pack-2-transparent-2_1Swag-Pack-2-transparent-2.webp 1080w, images/Swag-Pack-2-transparent-2_1Swag-Pack-2-transparent-2.webp 1200w"
+                        sizes="(max-width: 479px) 423.5625px, (max-width: 767px) 88vw, (max-width: 991px) 74vw, 425.78125px" class="img-pricing">
+                    <div class="result">
+                        <div class="price-standard-result">
+                            <div class="frame-1000007090">
+                                <div class="frame-1000007082">
+                                    <div class="description">Price with Standard</div>
+                                    <div class="h4-2024">$89.99</div>
+                                </div>
+                                <div class="frame-1000007085">
+                                    <div class="frame-1000007083">
+                                        <div class="description-small">Swag</div>
+                                        <div id="result" class="h6-2024">$81.00</div>
+                                    </div>
+                                    <div class="frame-1000007083">
+                                        <div class="description-small">Shipping</div>
+                                        <div class="h6-2024">$8.99</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-standard-result">
+                            <div class="frame-1000007090">
+                                <div class="frame-1000007082">
+                                    <div class="description">Price with Gold</div>
+                                    <div class="h4-2024">$70.00</div>
+                                </div>
+                                <div class="frame-1000007085">
+                                    <div class="frame-1000007083">
+                                        <div class="description-small">Swag</div>
+                                        <div class="h6-2024">$64.00</div>
+                                        <div class="discount">
+                                            <div class="frame-1000007091">
+                                                <div class="text-305">3% discount</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frame-1000007083">
+                                        <div class="description-small">Shipping</div>
+                                        <div class="h6-2024">$600</div>
+                                        <div class="discount">
+                                            <div class="frame-1000007091">
+                                                <div class="text-305">$1.50 discount</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="/source.js"></script>
+
+
+
+
+    <!--Tippy Tooltip Scripts-->
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+
+    <!--Tippy Light Theme CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.4/themes/light.css" />
+
+    <!--Tippy Default Settings-->
+    <!--Override these settings with custom attributes-->
+    <script>
+        tippy('.tippy', { // Add the class tippy to your element
+            theme: 'light', // Dark or Light
+            animation: 'scale', // Options, shift-away, shift-toward, scale, persepctive
+            duration: 250, // Duration of the Animation
+            arrow: true, // Add arrow to the tooltip
+            arrowType: 'round', // Sharp, round or empty for none
+            delay: [0, 50], // Trigger delay in & out
+            maxWidth: 240, // Optional, max width settings
+        })
+    </script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const gallerySlider = new Swiper(".home2_header_visuals", {
+            loop: true,
+            slidesPerView: 4,
+            centeredSlides: true,
+            speed: 800,
+            spaceBetween: 20,
+            grabCursor: true,
+            parallax: true,
+            watchSlidesProgress: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            allowTouchMove: false,
+            breakpoints: {
+                390: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                    watchSlidesProgress: false,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                }
+            }
+        });
+    </script>
+
+    <script>
+        const swiper = new Swiper('.swiper-stories', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            freeMode: false,
+            loop: true,
+            initialSlide: 0,
+            centeredSlides: false,
+            speed: 300,
+            grabCursor: false,
+            navigation: {
+                nextEl: '.link-stories-next',
+                prevEl: '.link-stories-prev',
+            },
+            pagination: {
+                el: '#pagination-stories',
+                clickable: true,
+                renderBullet: function(index, className) {
+                    var imageSrc = document.querySelectorAll('.swiper-slide .img-avatar-stories')[index].src;
+                    return '<span class="' + className + '" style="background-image:url(' + imageSrc + ')"></span>';
+                }
+            },
+            keyboard: {
+                enabled: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                },
+                767: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                },
+                988: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                }
+            }
+        });
+    </script>
+
+
+
+
 </body>
 
 </html>

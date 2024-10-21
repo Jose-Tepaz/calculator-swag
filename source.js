@@ -1,6 +1,6 @@
 //Slider
 var quantitySlider = document.getElementById("quantitySlider");
-//var colorSlider = document.getElementById("colorSlider");
+var colorSlider = 1;
 
 // dinamic texts
 var quantityInput = document.getElementById("quantityInput");
@@ -57,6 +57,20 @@ function handleRadioChange() {
         );
     }
 }
+
+//Choosing color
+document.querySelectorAll('input[name="logo-color"]').forEach(function(radio) {
+    radio.addEventListener("change", (e) => {
+
+        var colorSlider = 1;
+        colorSlider = e.target.value;
+        console.log(colorSlider)
+    });
+});
+
+
+
+
 
 function makeRequestBody(dynamicColors, dynamicQuantity, type) {
     if (type.toLowerCase() === "pack") {
