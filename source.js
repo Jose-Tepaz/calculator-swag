@@ -56,7 +56,7 @@ function handleRadioChange() {
 
         console.log(colorSlider, quantitySlider.value, selectedPricingType)
         fetchSwagPrices(
-            colorSlider.value,
+            colorSlider,
             quantitySlider.value,
             selectedPricingType
         );
@@ -64,36 +64,11 @@ function handleRadioChange() {
     }
 }
 
-//Type change
-document.querySelectorAll('input[name="type"]').forEach(function(radio) {
-    radio.addEventListener("change", (e) => {
-        handleRadioChange();
-    });
-});
 
-//Choosing color
-document.querySelectorAll('input[name="logo-color"]').forEach(function(radio) {
-    radio.addEventListener("change", (e) => {
 
-        //var colorSlider = 1;
-        colorSlider = e.target.value;
-        console.log(colorSlider)
-        handleRadioChange();
-    });
-});
 
-quantitySlider.addEventListener("input", (e) => {
-    quantityInput.innerText = parseInt(e.target.value);
-});
 
-quantitySlider.addEventListener("change", async(e) => {
-    await fetchSwagPrices(
 
-        colorSlider.value,
-        quantitySlider.value,
-        selectedPricingType
-    );
-});
 
 function makeRequestBody(dynamicColors, dynamicQuantity, type) {
     if (type.toLowerCase() === "pack") {
@@ -171,3 +146,39 @@ async function fetchSwagPrices(dynamicColors, dynamicQuantity, type) {
         resultInput.innerText = prevCost;
     }
 }
+
+
+
+
+
+quantitySlider.addEventListener("input", (e) => {
+    quantityInput.innerText = parseInt(e.target.value);
+});
+
+
+//Choosing color
+document.querySelectorAll('input[name="logo-color"]').forEach(function(radio) {
+    radio.addEventListener("change", (e) => {
+
+        //var colorSlider = 1;
+        colorSlider = e.target.value;
+        console.log(colorSlider)
+        handleRadioChange();
+    });
+});
+
+quantitySlider.addEventListener("change", async(e) => {
+    await fetchSwagPrices(
+
+        colorSlider,
+        quantitySlider.value,
+        selectedPricingType
+    );
+});
+
+//Type change
+document.querySelectorAll('input[name="type"]').forEach(function(radio) {
+    radio.addEventListener("change", (e) => {
+        handleRadioChange();
+    });
+});

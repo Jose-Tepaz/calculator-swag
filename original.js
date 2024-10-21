@@ -1,11 +1,10 @@
 //Slider
-alert("hola")
 var quantitySlider = document.getElementById("quantitySlider");
-var colorSlider = 1;
+var colorSlider = document.getElementById("colorSlider");
 
-// dinamic texts
+// Input
 var quantityInput = document.getElementById("quantityInput");
-//var colorInput = document.getElementById("color");
+var colorInput = document.getElementById("color");
 var resultInput = document.getElementById("result");
 
 // API base URL V1
@@ -13,7 +12,7 @@ const baseUrl = "https://api.swagup.com/form-api/v1";
 
 // Text-block
 var typeTextBlock = document.getElementById("type-text");
-//var resultTypeTextBlock = document.getElementById("result-type"); // Getting the result-type text block
+var resultTypeTextBlock = document.getElementById("result-type"); // Getting the result-type text block
 
 // Variable to store the selected type value, with default value "Pack"
 var selectedPricingType = "Pack";
@@ -24,12 +23,12 @@ var bulkElement = document.getElementById("bulkElement");
 
 // Set defaults
 quantityInput.innerText = 50;
-//colorInput.innerText = 1;
+colorInput.innerText = 1;
 quantitySlider.value = quantityInput.innerText;
-//colorSlider.value = colorInput.innerText;
+colorSlider.value = colorInput.innerText;
 resultInput.innerText = "$ 00"; // Setting default value to result input
 typeTextBlock.textContent = "Pack Quantity"; // Setting default text
-//resultTypeTextBlock.textContent = "Price per pack"; // Setting default text for result-type block
+resultTypeTextBlock.textContent = "Price per pack"; // Setting default text for result-type block
 
 fetchSwagPrices(colorSlider.value, quantitySlider.value, selectedPricingType);
 domOps();
@@ -58,20 +57,6 @@ function handleRadioChange() {
         );
     }
 }
-
-//Choosing color
-document.querySelectorAll('input[name="logo-color"]').forEach(function(radio) {
-    radio.addEventListener("change", (e) => {
-
-        var colorSlider = 1;
-        colorSlider = e.target.value;
-        console.log(colorSlider)
-    });
-});
-
-
-
-
 
 function makeRequestBody(dynamicColors, dynamicQuantity, type) {
     if (type.toLowerCase() === "pack") {
