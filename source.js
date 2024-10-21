@@ -30,7 +30,7 @@ resultInput.innerText = "$ 00"; // Setting default value to result input
 typeTextBlock.textContent = "Pack Quantity"; // Setting default text
 //resultTypeTextBlock.textContent = "Price per pack"; // Setting default text for result-type block
 
-//fetchSwagPrices(colorSlider.value, quantitySlider.value, selectedPricingType);
+fetchSwagPrices(colorSlider.value, quantitySlider.value, selectedPricingType);
 //domOps();
 // Function to handle radio change
 function handleRadioChange() {
